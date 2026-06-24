@@ -1,0 +1,30 @@
+# Dependencias
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Archivos compilados
+client/assets/
+server/assets/
+
+# Build output
+dist/
+build/
+
+# IDE y editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Entorno
+.env
+.env.local
+.env.*.local
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <rect width="240" height="60" fill="none"/>
+  <rect x="2" y="10" width="40" height="40" rx="6" fill="#1e3a8a"/>
+  <text x="22" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#ffffff">B</text>
+  <text x="52" y="32" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#0f172a">BIJE</text>
+  <text x="102" y="32" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#1e3a8a">MERKATTO</text>
+  <text x="52" y="46" font-family="Arial, sans-serif" font-size="7" letter-spacing="2" fill="#64748b">SERVICIOS DE EXCELENCIA</text>
+</svg>
