@@ -17,7 +17,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -49,6 +49,7 @@
     }
   </style>
 
+  <!-- Compiled Tailwind Styles -->
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -83,6 +84,7 @@
         </a>
       </nav>
 
+      <!-- Mobile menu button -->
       <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false"
         class="rounded-md p-2 text-foreground lg:hidden focus:outline-none">
         <i id="menu-icon-open" data-lucide="menu" class="h-5 w-5"></i>
@@ -90,6 +92,7 @@
       </button>
     </div>
 
+    <!-- Mobile Navigation Menu -->
     <div id="mobile-menu" class="border-t border-border bg-background lg:hidden hidden">
       <div class="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-4">
         <a href="#inicio" class="rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-primary">Inicio</a>
@@ -104,87 +107,113 @@
   </header>
 
   <main>
-    <section class="relative overflow-hidden">
-      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-60"
-        style="background-image: radial-gradient(circle at 15% 20%, color-mix(in oklab, var(--primary-light) 22%, transparent), transparent 55%), radial-gradient(circle at 90% 85%, color-mix(in oklab, var(--primary) 14%, transparent), transparent 55%)">
+    <!-- Hero Section -->
+<section class="relative overflow-hidden">
+
+  <!-- Decorative gradients -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-60"
+    style="background-image: radial-gradient(circle at 15% 20%, color-mix(in oklab, var(--primary-light) 22%, transparent), transparent 55%), radial-gradient(circle at 90% 85%, color-mix(in oklab, var(--primary) 14%, transparent), transparent 55%)">
+  </div>
+
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-[0.04]"
+    style="background-image: linear-gradient(var(--foreground) 1px, transparent 1px),
+           linear-gradient(90deg, var(--foreground) 1px, transparent 1px);
+           background-size: 48px 48px;">
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-12 lg:py-24">
+
+    <!-- TEXTO -->
+    <div class="lg:col-span-5">
+
+      <h1 class="text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.75rem]">
+        Tu marca en las
+        <span class="text-primary">mejores manos</span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+        Bienvenidos al corazón de <strong class="font-semibold text-foreground">BIJE MERKATTO</strong>.
+        Cada día creamos experiencias únicas para nuestros clientes.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#nosotros"
+          class="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elevated)]">
+          Conoce más
+        </a>
+
+        <a href="#servicios"
+          class="inline-flex items-center gap-2 rounded-md border border-border bg-background/70 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-primary/30 hover:bg-background">
+          Servicios
+        </a>
       </div>
 
-      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-[0.04]"
-        style="background-image: linear-gradient(var(--foreground) 1px, transparent 1px),
-               linear-gradient(90deg, var(--foreground) 1px, transparent 1px);
-               background-size: 48px 48px;">
+      <dl class="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-border/80 pt-8">
+        <div>
+          <dt class="bg-clip-text font-display text-3xl font-bold text-transparent" style="background-image: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%)">+18</dt>
+          <dd class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Años de experiencia</dd>
+        </div>
+        <div>
+          <dt class="bg-clip-text font-display text-3xl font-bold text-transparent" style="background-image: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%)">+50</dt>
+          <dd class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Marcas atendidas</dd>
+        </div>
+        <div>
+          <dt class="bg-clip-text font-display text-3xl font-bold text-transparent" style="background-image: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%)">100%</dt>
+          <dd class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Compromiso</dd>
+        </div>
+      </dl>
+
+    </div>
+
+    <!-- IMAGEN HERO (PORTADA REAL) -->
+    <div class="lg:col-span-7">
+
+      <div class="relative h-[80vh] min-h-[680px] overflow-hidden rounded-2xl border border-border/80 shadow-xl">
+
+        <img
+          src="./brand/Equipo.jpg"
+          alt="BIJE MERKATTO — Servicios Especializados"
+          class="h-full w-full object-cover"
+        />
+
+        <!-- overlay para contraste leve -->
+        <div class="absolute inset-0 bg-black/10"></div>
+
       </div>
 
-      <section class="relative w-full overflow-hidden">
-        <div class="relative w-full" style="height: 700px; position: relative;">
-          <img src="brand/Equipo.jpg" alt="Equipo BIJE MERKATTO"
-            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; z-index: 0;" />
+    </div>
 
-          <div style="position: absolute; inset: 0; z-index: 1;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 55%, rgba(0,0,0,0.55) 100%);">
-          </div>
-
-          <div style="position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 4rem 2rem 3rem; box-sizing: border-box;">
-            <h1 style="text-align: center; font-size: clamp(3.5rem, 7vw, 6.5rem); font-weight: 700; color: #ffffff; line-height: 1.1; text-shadow: 0 4px 15px rgba(0,0,0,0.7); margin: 0; font-family: 'Georgia', 'Times New Roman', serif;">
-              Tu marca en las mejores manos
-            </h1>
-
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; max-width: 1200px; margin: 0 auto; gap: 1.5rem;">
-              <div style="text-align: center; color: #ffffff; flex: 1; font-family: 'Georgia', 'Times New Roman', serif; text-shadow: 0 3px 10px rgba(0,0,0,0.8);">
-                <span style="font-size: clamp(2.5rem, 5vw, 4.2rem); font-weight: 700; display: block; margin-bottom: 0.2rem;">+ 18</span>
-                <span style="font-size: clamp(1.1rem, 2vw, 1.8rem); font-weight: 400; display: block; line-height: 1.2;">años de experiencia</span>
-              </div>
-
-              <div style="text-align: center; color: #ffffff; flex: 1; font-family: 'Georgia', 'Times New Roman', serif; text-shadow: 0 3px 10px rgba(0,0,0,0.8);">
-                <span style="font-size: clamp(2.5rem, 5vw, 4.2rem); font-weight: 700; display: block; margin-bottom: 0.2rem;">+ 50</span>
-                <span style="font-size: clamp(1.1rem, 2vw, 1.8rem); font-weight: 400; display: block; line-height: 1.2;">marcas atendidas</span>
-              </div>
-
-              <div style="text-align: center; color: #ffffff; flex: 1; font-family: 'Georgia', 'Times New Roman', serif; text-shadow: 0 3px 10px rgba(0,0,0,0.8);">
-                <span style="font-size: clamp(2.5rem, 5vw, 4.2rem); font-weight: 700; display: block; margin-bottom: 0.2rem;">100%</span>
-                <span style="font-size: clamp(1.1rem, 2vw, 1.8rem); font-weight: 400; display: block; line-height: 1.2;">compromiso</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style="background: #fff; text-align: center; padding: 2rem 1.5rem;">
-          <p style="color: #374151; font-size: 1rem; line-height: 1.7; max-width: 600px; margin: 0 auto;">
-            Cada día creamos experiencias únicas para nuestros clientes, transformamos
-            cada evento con soluciones innovadoras y un enfoque estratégico.
-          </p>
-          <div style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
-            <a href="#nosotros" style="display: inline-flex; align-items: center; justify-content: center; background: #0A7EE4; color: #fff; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.875rem; font-weight: 700; text-decoration: none; transition: opacity 0.2s;">Conoce más de la empresa &rarr;</a>
-            <a href="#servicios" style="display: inline-flex; align-items: center; justify-content: center; background: #fff; color: #374151; border: 1px solid #d1d5db; padding: 0.65rem 1.4rem; border-radius: 6px; font-size: 0.875rem; font-weight: 700; text-decoration: none;">Nuestros servicios</a>
-          </div>
-        </div>
-      </section>
-    </section>
+  </div>
+</section>
 
     <!-- NOSOTROS -->
 <section id="nosotros" class="border-b border-border/60 bg-background py-24">
   <div class="mx-auto max-w-7xl px-6">
-    <div class="mb-12 max-w-3xl">
+
+    <!-- Encabezado -->
+    <div class="mb-12">
       <div class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Nosotros</div>
       <h2 class="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
         Más que un equipo, una familia dedicada a la excelencia
       </h2>
-      <p class="mt-4 text-base leading-relaxed text-muted-foreground">
-        Desde nuestros inicios, hemos construido una trayectoria basada en disciplina, pasión y un compromiso claro con cada marca que confiamos en nosotros.
-      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
     </div>
 
+    <!-- Grid: Visión + Misión + Imagen -->
     <div class="grid gap-6 lg:grid-cols-3">
+
       <div class="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
         <div class="absolute inset-x-0 top-0 h-2 rounded-t-3xl bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-
+        
         <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/10 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
             <circle cx="12" cy="12" r="3"/>
           </svg>
         </div>
-
+        
         <div class="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Nuestra Visión</div>
         <h3 class="mt-2 font-display text-xl font-semibold text-foreground">Liderar con excelencia</h3>
         <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -194,8 +223,9 @@
 
       <div class="group relative overflow-hidden rounded-2xl p-7 text-white shadow-[var(--shadow-card)] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
         style="background: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%);">
+        
         <div class="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-white/5 blur-xl"></div>
-
+        
         <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/20 backdrop-blur transition-colors group-hover:bg-white group-hover:text-primary">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
@@ -203,7 +233,7 @@
             <circle cx="12" cy="12" r="2"/>
           </svg>
         </div>
-
+        
         <div class="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Nuestra Misión</div>
         <h3 class="mt-2 font-display text-xl font-semibold text-white">Servicios de alta calidad</h3>
         <p class="mt-3 text-sm leading-relaxed text-white/90">
@@ -219,100 +249,130 @@
         />
         <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
       </div>
+
+    </div>
+
     </div>
   </div>
 </section>
 
 <!-- Línea del tiempo -->
-<section id="historia" class="historia-bg relative overflow-hidden border-b border-border/60 py-24">
+<section id="historia" class="historia-bg relative overflow-hidden border-b border-border/60 py-24 w-full">
+
   <div class="pointer-events-none absolute inset-0 bg-[url('radial-gradient(circle_at_1px_1px,_rgba(255,255,255,0.06)_1px,_transparent_0)')] bg-[size:28px_28px]"></div>
   <div class="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-[oklch(0.45_0.14_250_/_0.12)] blur-[60px]"></div>
   <div class="pointer-events-none absolute -right-32 bottom-10 h-72 w-72 rounded-full bg-[oklch(0.45_0.14_250_/_0.12)] blur-[60px]"></div>
 
-  <div class="relative mx-auto max-w-7xl px-6">
-    <div class="mx-auto max-w-3xl text-center">
-      <div class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/90">Nuestra historia</div>
+  <div class="relative mx-auto w-full px-4 sm:px-8 lg:px-16">
+
+    <div class="mx-auto max-w-2xl text-center">
+      <div class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white">Nuestra historia</div>
       <h2 class="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Una década de crecimiento y excelencia</h2>
-      <p class="mt-4 text-base leading-relaxed text-white/90">Cada hito representa una promesa cumplida con nuestros clientes y nuestro equipo.</p>
+      <p class="mt-4 text-base leading-relaxed text-white">Cada hito representa una promesa cumplida con nuestros clientes y nuestro equipo.</p>
     </div>
 
-    <div class="relative mt-16">
-      <div class="absolute inset-x-0 top-24 hidden h-px bg-white/20 lg:block"></div>
-      <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-5">
-        <article class="timeline-item flex flex-col text-center">
-          <div class="timeline-card relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-2 shadow-[0_20px_45px_rgba(0,0,0,0.18)]">
-            <img src="./brand/Timeline/BlackBuck2015.jpeg" alt="Fundación 2015" class="timeline-img h-52 w-full rounded-xl object-cover" />
-            <div class="timeline-overlay"></div>
-          </div>
-          <div class="timeline-marker mt-4">
-            <span class="timeline-dot"></span>
-          </div>
-          <div class="timeline-text-wrapper mt-3">
-            <div class="font-display text-3xl font-bold text-white">2015</div>
-            <div class="mt-1 text-sm font-semibold text-white/95">Evento Black Buck</div>
-            <p class="mx-auto mt-2 max-w-[180px] text-sm leading-relaxed text-white/80">Nos consolidamos con eventos de alto impacto y una presencia visual distintiva.</p>
-          </div>
-        </article>
+    <div class="relative mt-20 w-full overflow-x-auto pb-10 scrollbar-thin scrollbar-thumb-[oklch(0.45_0.14_250_/_0.5)] scrollbar-track-transparent">
 
-        <article class="timeline-item flex flex-col text-center">
-          <div class="timeline-card relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-2 shadow-[0_20px_45px_rgba(0,0,0,0.18)]">
-            <img src="./brand/Timeline/Ropa.jpeg" alt="2018" class="timeline-img h-52 w-full rounded-xl object-cover" />
-            <div class="timeline-overlay"></div>
-          </div>
-          <div class="timeline-marker mt-4">
-            <span class="timeline-dot"></span>
-          </div>
-          <div class="timeline-text-wrapper mt-3">
-            <div class="font-display text-3xl font-bold text-white">2018</div>
-            <div class="mt-1 text-sm font-semibold text-white/95">Expansión de marcas</div>
-            <p class="mx-auto mt-2 max-w-[180px] text-sm leading-relaxed text-white/80">Ampliamos nuestra cobertura para atender marcas premium y experiencias de venta más complejas.</p>
-          </div>
-        </article>
+      <div class="historia-linea-central absolute left-0"></div>
 
-        <article class="timeline-item flex flex-col text-center">
-          <div class="timeline-card relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-2 shadow-[0_20px_45px_rgba(0,0,0,0.18)]">
-            <img src="./brand/Timeline/TratamientoCare.jpeg" alt="2020" class="timeline-img h-52 w-full rounded-xl object-cover" />
-            <div class="timeline-overlay"></div>
-          </div>
-          <div class="timeline-marker mt-4">
-            <span class="timeline-dot"></span>
-          </div>
-          <div class="timeline-text-wrapper mt-3">
-            <div class="font-display text-3xl font-bold text-white">2020</div>
-            <div class="mt-1 text-sm font-semibold text-white/95">Expansión nacional</div>
-            <p class="mx-auto mt-2 max-w-[180px] text-sm leading-relaxed text-white/80">Llegamos a nuevas regiones y fortalecimos nuestros equipos de atención.</p>
-          </div>
-        </article>
+      <div class="flex w-full min-w-[1200px] justify-between gap-6 px-4 pt-8">
 
-        <article class="timeline-item flex flex-col text-center">
-          <div class="timeline-card relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-2 shadow-[0_20px_45px_rgba(0,0,0,0.18)]">
-            <img src="./brand/Timeline/Jersey.jpeg" alt="2022" class="timeline-img h-52 w-full rounded-xl object-cover" />
-            <div class="timeline-overlay"></div>
+        <div class="timeline-item flex flex-1 flex-col items-center text-center cursor-pointer">
+          <div class="timeline-card relative z-20 flex h-48 w-full max-w-[220px] p-2 items-center justify-center rounded-2xl bg-white shadow-lg overflow-hidden">
+            <img src="./brand/Timeline/BlackBuck2015.jpeg" alt="Fundación 2014" class="timeline-img h-full w-full rounded-xl object-cover" />
+            <div class="timeline-overlay absolute inset-0 rounded-2xl bg-gradient-to-t from-black/60 to-transparent opacity-0 pointer-events-none"></div>
           </div>
-          <div class="timeline-marker mt-4">
-            <span class="timeline-dot"></span>
+          <div class="relative flex w-full flex-col items-center justify-center h-16">
+            <div class="timeline-line absolute bottom-1/2 w-[2px] h-10 bg-white/20"></div>
+            <div class="timeline-dot absolute top-1/2 z-30 h-4 w-4 -translate-y-1/2 rounded-full bg-[oklch(0.45_0.14_250)] border-2 border-transparent"></div>
           </div>
-          <div class="timeline-text-wrapper mt-3">
-            <div class="font-display text-3xl font-bold text-white">2022</div>
-            <div class="mt-1 text-sm font-semibold text-white/95">Marcas de alta gama</div>
-            <p class="mx-auto mt-2 max-w-[180px] text-sm leading-relaxed text-white/80">Nos posicionamos como aliados estratégicos de líderes del mercado.</p>
+          <div class="timeline-text-wrapper relative z-10">
+            <div class="text-year font-display text-3xl font-bold text-white drop-shadow-md">2015</div>
+            <div class="text-title mt-1 text-sm font-semibold text-white">Evento Black Buck</div>
+            <p class="text-desc mt-2 text-sm leading-relaxed mx-auto max-w-[180px] text-white">Este es el evento Black Buck donde mostramos calzado y sombreros.</p>
           </div>
-        </article>
+        </div>
 
-        <article class="timeline-item special flex flex-col text-center">
-          <div class="timeline-card relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-[oklch(0.28_0.13_258)] to-[oklch(0.45_0.14_250)] p-2 shadow-[0_20px_45px_rgba(0,0,0,0.22)]">
-            <img src="./brand/Timeline/NFLMerca.jpeg" alt="2025" class="timeline-img h-52 w-full rounded-xl object-cover border border-white/20" />
-            <div class="timeline-overlay"></div>
+        <div class="timeline-item flex flex-1 flex-col items-center text-center cursor-pointer">
+          <div class="timeline-card relative z-20 flex h-48 w-full max-w-[220px] p-2 items-center justify-center rounded-2xl bg-white shadow-lg overflow-hidden">
+            <img src="./brand/Timeline/Ropa.jpeg" alt="2016" class="timeline-img h-full w-full rounded-xl object-cover" />
+            <div class="timeline-overlay absolute inset-0 rounded-2xl bg-gradient-to-t from-black/60 to-transparent opacity-0 pointer-events-none"></div>
           </div>
-          <div class="timeline-marker mt-4">
-            <span class="timeline-dot special-dot"></span>
+          <div class="relative flex w-full flex-col items-center justify-center h-16">
+            <div class="timeline-line absolute bottom-1/2 w-[2px] h-10 bg-white/20"></div>
+            <div class="timeline-dot absolute top-1/2 z-30 h-4 w-4 -translate-y-1/2 rounded-full bg-[oklch(0.45_0.14_250)] border-2 border-transparent"></div>
           </div>
-          <div class="timeline-text-wrapper mt-3">
-            <div class="font-display text-3xl font-bold text-white">2025</div>
-            <div class="mt-1 text-sm font-semibold text-white/95">Más de 10 años</div>
-            <p class="mx-auto mt-2 max-w-[180px] text-sm leading-relaxed text-white/80">Una década de excelencia, pasión y resultados para nuestros clientes.</p>
+          <div class="timeline-text-wrapper relative z-10">
+            <div class="text-year font-display text-3xl font-bold text-white drop-shadow-md">2018</div>
+            <div class="text-title mt-1 text-sm font-semibold text-white">Evento Perfumería</div>
+            <p class="text-desc mt-2 text-sm leading-relaxed mx-auto max-w-[180px] text-white">Consolidamos equipos especializados para marcas premium.</p>
           </div>
-        </article>
+        </div>
+
+        <div class="timeline-item flex flex-1 flex-col items-center text-center cursor-pointer">
+          <div class="timeline-card relative z-20 flex h-48 w-full max-w-[220px] p-2 items-center justify-center rounded-2xl bg-white shadow-lg overflow-hidden">
+            <img src="./brand/Timeline/TratamientoCare.jpeg" alt="2018" class="timeline-img h-full w-full rounded-xl object-cover" />
+            <div class="timeline-overlay absolute inset-0 rounded-2xl bg-gradient-to-t from-black/60 to-transparent opacity-0 pointer-events-none"></div>
+          </div>
+          <div class="relative flex w-full flex-col items-center justify-center h-16">
+            <div class="timeline-line absolute bottom-1/2 w-[2px] h-10 bg-white/20"></div>
+            <div class="timeline-dot absolute top-1/2 z-30 h-4 w-4 -translate-y-1/2 rounded-full bg-[oklch(0.45_0.14_250)] border-2 border-transparent"></div>
+          </div>
+          <div class="timeline-text-wrapper relative z-10">
+            <div class="text-year font-display text-3xl font-bold text-white drop-shadow-md">2020</div>
+            <div class="text-title mt-1 text-sm font-semibold text-white">Expansión nacional</div>
+            <p class="text-desc mt-2 text-sm leading-relaxed mx-auto max-w-[180px] text-white">Llegamos a las principales ciudades con cobertura activa.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item flex flex-1 flex-col items-center text-center cursor-pointer">
+          <div class="timeline-card relative z-20 flex h-48 w-full max-w-[220px] p-2 items-center justify-center rounded-2xl bg-white shadow-lg overflow-hidden">
+            <img src="./brand/Timeline/Jersey.jpeg" alt="2020" class="timeline-img h-full w-full rounded-xl object-cover" />
+            <div class="timeline-overlay absolute inset-0 rounded-2xl bg-gradient-to-t from-black/60 to-transparent opacity-0 pointer-events-none"></div>
+          </div>
+          <div class="relative flex w-full flex-col items-center justify-center h-16">
+            <div class="timeline-line absolute bottom-1/2 w-[2px] h-10 bg-white/20"></div>
+            <div class="timeline-dot absolute top-1/2 z-30 h-4 w-4 -translate-y-1/2 rounded-full bg-[oklch(0.45_0.14_250)] border-2 border-transparent"></div>
+          </div>
+          <div class="timeline-text-wrapper relative z-10">
+            <div class="text-year font-display text-3xl font-bold text-white drop-shadow-md">2020</div>
+            <div class="text-title mt-1 text-sm font-semibold text-white">Marcas de alta gama</div>
+            <p class="text-desc mt-2 text-sm leading-relaxed mx-auto max-w-[180px] text-white">Nos posicionamos como aliados estratégicos de líderes.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item flex flex-1 flex-col items-center text-center cursor-pointer">
+          <div class="timeline-card relative z-20 flex h-48 w-full max-w-[220px] p-2 items-center justify-center rounded-2xl bg-white shadow-lg overflow-hidden">
+            <img src="./brand/Timeline/NFL.jpeg" alt="2022" class="timeline-img h-full w-full rounded-xl object-cover" />
+            <div class="timeline-overlay absolute inset-0 rounded-2xl bg-gradient-to-t from-black/60 to-transparent opacity-0 pointer-events-none"></div>
+          </div>
+          <div class="relative flex w-full flex-col items-center justify-center h-16">
+            <div class="timeline-line absolute bottom-1/2 w-[2px] h-10 bg-white/20"></div>
+            <div class="timeline-dot absolute top-1/2 z-30 h-4 w-4 -translate-y-1/2 rounded-full bg-[oklch(0.45_0.14_250)] border-2 border-transparent"></div>
+          </div>
+          <div class="timeline-text-wrapper relative z-10">
+            <div class="text-year font-display text-3xl font-bold text-white drop-shadow-md">2022</div>
+            <div class="text-title mt-1 text-sm font-semibold text-white">Cobertura ampliada</div>
+            <p class="text-desc mt-2 text-sm leading-relaxed mx-auto max-w-[180px] text-white">Operamos en eventos a lo largo del territorio nacional.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item special flex flex-1 flex-col items-center text-center cursor-pointer">
+          <div class="timeline-card relative z-20 flex h-48 w-full max-w-[220px] p-1 items-center justify-center rounded-2xl bg-gradient-to-br from-[oklch(0.28_0.13_258)] to-[oklch(0.45_0.14_250)] shadow-lg overflow-hidden">
+            <img src="./brand/Timeline/NFLMerca.jpeg" alt="2025" class="timeline-img h-full w-full rounded-xl object-cover border border-white/20" />
+            <div class="timeline-overlay absolute inset-0 rounded-2xl bg-gradient-to-t from-[oklch(0.45_0.14_250_/_0.8)] to-transparent opacity-0 pointer-events-none"></div>
+          </div>
+          <div class="relative flex w-full flex-col items-center justify-center h-16">
+            <div class="timeline-line absolute bottom-1/2 w-[2px] h-10 bg-white/40"></div>
+            <div class="timeline-dot absolute top-1/2 z-30 h-5 w-5 -translate-y-1/2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
+          </div>
+          <div class="timeline-text-wrapper relative z-10">
+            <div class="font-display text-3xl font-bold text-white drop-shadow-lg">2025</div>
+            <div class="mt-1 text-sm font-semibold text-white">Más de 10 años</div>
+            <p class="mt-2 text-sm leading-relaxed mx-auto max-w-[180px] text-white">Una década de excelencia, pasión y resultados.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -331,37 +391,43 @@
         </div>
 
         <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Servicio 1 -->
           <article
-          class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
+            class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
             <div
-             class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
               <i data-lucide="sparkles" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold text-foreground">Demostración de productos</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Presentaciones profesionales que destacan las cualidades y beneficios de productos de alta gama.</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Presentaciones profesionales que destacan las
+              cualidades y beneficios de productos de alta gama.</p>
           </article>
 
+          <!-- Servicio 2 -->
           <article
-           class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
+            class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
             <div
-             class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
               <i data-lucide="megaphone" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold text-foreground">Promoción especializada</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Campañas promocionales ejecutadas por personal capacitado, alineadas con la identidad de cada marca.</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Campañas promocionales ejecutadas por personal
+              capacitado, alineadas con la identidad de cada marca.</p>
           </article>
 
           <!-- Servicio 3 -->
           <article
-           class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
-            <div 
-            class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+            class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
               <i data-lucide="headphones" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold text-foreground">Atención al cliente</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Servicio cordial, informado y orientado a generar relaciones duraderas con los consumidores.</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Servicio cordial, informado y orientado a
+              generar relaciones duraderas con los consumidores.</p>
           </article>
 
+          <!-- Servicio 4 -->
           <article
             class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
             <div
@@ -369,29 +435,40 @@
               <i data-lucide="shopping-bag" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold text-foreground">Activaciones comerciales</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Diseño y ejecución de activaciones en puntos estratégicos para impulsar la presencia de su marca.</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Diseño y ejecución de activaciones en puntos
+              estratégicos para impulsar la presencia de su marca.</p>
           </article>
 
-          <article class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+          <!-- Servicio 5 -->
+          <article
+            class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
               <i data-lucide="store" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold text-foreground">Apoyo en puntos de venta</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Acompañamiento integral en tienda con personal especializado para maximizar la conversión.</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Acompañamiento integral en tienda con personal
+              especializado para maximizar la conversión.</p>
           </article>
 
-          <article class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+          <!-- Servicio 6 -->
+          <article
+            class="group rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
               <i data-lucide="users" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold text-foreground">Equipos a medida</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Conformamos equipos a la medida del proyecto, capacitados específicamente para cada marca.</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Conformamos equipos a la medida del proyecto,
+              capacitados específicamente para cada marca.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experiencia" class="relative overflow-hidden border-b border-border/60 bg-primary text-primary-foreground">
+    <!-- EXPERIENCIA -->
+    <section id="experiencia"
+      class="relative overflow-hidden border-b border-border/60 bg-primary text-primary-foreground">
       <div aria-hidden="true" class="absolute inset-0 opacity-20"
         style="background-image: radial-gradient(circle at 80% 20%, color-mix(in oklab, var(--primary-light) 50%, transparent), transparent 50%)">
       </div>
@@ -405,219 +482,71 @@
         </div>
 
         <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <!-- Card 1 -->
           <div class="rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-7 backdrop-blur-sm">
             <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground">
               <i data-lucide="award" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold">Más de 10 años de trayectoria</h3>
-            <p class="mt-2 text-sm leading-relaxed text-primary-foreground/80">Una década consolidando relaciones con marcas líderes y entregando resultados consistentes.</p>
+            <p class="mt-2 text-sm leading-relaxed text-primary-foreground/80">Una década consolidando relaciones con
+              marcas líderes y entregando resultados consistentes.</p>
           </div>
 
+          <!-- Card 2 -->
           <div class="rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-7 backdrop-blur-sm">
             <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground">
               <i data-lucide="users" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold">Equipos especializados</h3>
-            <p class="mt-2 text-sm leading-relaxed text-primary-foreground/80">Personal capacitado, presentable y comprometido con representar dignamente cada marca.</p>
+            <p class="mt-2 text-sm leading-relaxed text-primary-foreground/80">Personal capacitado, presentable y
+              comprometido con representar dignamente cada marca.</p>
           </div>
 
+          <!-- Card 3 -->
           <div class="rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-7 backdrop-blur-sm">
             <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground">
               <i data-lucide="building-2" class="h-5 w-5"></i>
             </div>
             <h3 class="mt-5 font-display text-lg font-semibold">Cobertura multi-industria</h3>
-            <p class="mt-2 text-sm leading-relaxed text-primary-foreground/80">Experiencia comprobada en distintos sectores y categorías de productos premium.</p>
+            <p class="mt-2 text-sm leading-relaxed text-primary-foreground/80">Experiencia comprobada en distintos
+              sectores y categorías de productos premium.</p>
           </div>
         </div>
       </div>
     </section>
 
-<!-- GALERÍA -->
-<section id="galeria" class="border-b border-border/60 bg-secondary/30 py-24">
-  <div class="mx-auto max-w-7xl px-6">
-
-    <!-- Encabezado -->
-    <div class="mx-auto max-w-2xl text-center">
-      <div class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Galería</div>
-      <h2 class="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-        Nuestro trabajo en acción
-      </h2>
-      <p class="mt-4 text-base leading-relaxed text-muted-foreground">
-        Una muestra del talento, la dedicación y la calidad con que representamos cada marca en piso de venta.
-      </p>
-    </div>
-
-    <div class="mt-14 flex flex-col gap-5">
-
-      <!-- FILA 1 -->
-      <div class="flex gap-5" style="height: 560px;">
-
-        <!-- Item 1 — grande -->
-        <figure
-          class="relative overflow-hidden rounded-xl border border-border bg-card shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
-          style="flex: 0 0 60%;"
-          onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0.2)'"
-          onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0)'">
-          <img
-            src="./brand/Galery/Calzado.jpeg"
-            alt="Calzado deportivo"
-            loading="lazy"
-            class="w-full h-full object-cover"
-            style="transition: transform 0.5s ease; transform: scale(1);"
-          />
-          <div class="overlay absolute inset-0" style="transition: background 0.5s ease; background: rgba(0,0,0,0);"></div>
-          <figcaption class="absolute inset-x-0 bottom-0 flex flex-col text-white"
-            style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 100%); padding: 80px 20px 24px 20px;">
-            <div class="font-display text-lg font-semibold">Calzado deportivo</div>
-            <div class="mt-1 text-sm text-white/80">Demostración y venta en piso</div>
-          </figcaption>
-        </figure>
-
-        <!-- Columna derecha -->
-        <div class="flex flex-col gap-5" style="flex: 1;">
-
-          <!-- Item 2 -->
-          <figure
-            class="relative overflow-hidden rounded-xl border border-border bg-card shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
-            style="flex: 1;"
-            onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0.2)'"
-            onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0)'">
-            <img
-              src="./brand/Galery/F1.jpeg"
-              alt="Eventos especiales F1"
-              loading="lazy"
-              class="w-full h-full object-cover"
-              style="transition: transform 0.5s ease; transform: scale(1);"
-            />
-            <div class="overlay absolute inset-0" style="transition: background 0.5s ease; background: rgba(0,0,0,0);"></div>
-            <figcaption class="absolute inset-x-0 bottom-0 flex flex-col text-white"
-              style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 100%); padding: 80px 20px 24px 20px;">
-              <div class="font-display text-lg font-semibold">Eventos especiales F1</div>
-              <div class="mt-1 text-sm text-white/80">Activación de licencias deportivas</div>
-            </figcaption>
-          </figure>
-
-          <!-- Item 3 -->
-          <figure
-            class="relative overflow-hidden rounded-xl border border-border bg-card shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
-            style="flex: 1;"
-            onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0.2)'"
-            onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0)'">
-            <img
-              src="./brand/Galery/NFL.jpeg"
-              alt="Licencias NFL"
-              loading="lazy"
-              class="w-full h-full object-cover"
-              style="transition: transform 0.5s ease; transform: scale(1);"
-            />
-            <div class="overlay absolute inset-0" style="transition: background 0.5s ease; background: rgba(0,0,0,0);"></div>
-            <figcaption class="absolute inset-x-0 bottom-0 flex flex-col text-white"
-              style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 100%); padding: 80px 20px 24px 20px;">
-              <div class="font-display text-base font-semibold">Licencias NFL</div>
-              <div class="mt-1 text-sm text-white/80">Promoción de producto licenciado</div>
-            </figcaption>
-          </figure>
-
+    <!-- DESCUBRE MÁS (CTA) -->
+    <section class="relative overflow-hidden border-b border-border/60 bg-background py-20">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-[0.5]"
+        style="background-image: radial-gradient(circle at 50% 0%, color-mix(in oklab, var(--primary-light) 18%, transparent), transparent 60%)">
+      </div>
+      <div class="relative mx-auto max-w-4xl px-6 text-center">
+        <div
+          class="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-secondary px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <i data-lucide="sparkles" class="h-3.5 w-3.5"></i> Descubre más
+        </div>
+        <h2 class="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          ¿Listo para conocer <span class="bg-clip-text text-transparent"
+            style="background-image: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%)">cómo elevamos su marca?</span>
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          Permítanos mostrarle cómo nuestros equipos especializados transforman cada punto de contacto en una
+          experiencia memorable para sus clientes.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href="#contacto"
+            class="inline-flex items-center gap-2 rounded-md px-7 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elevated)]"
+            style="background-image: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%)">
+            Agendar una conversación <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          <a href="#servicios"
+            class="inline-flex items-center gap-2 rounded-md border border-border bg-background px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/30 hover:bg-secondary">
+            Ver servicios
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- FILA 2 -->
-      <div class="flex gap-5" style="height: 270px;">
-
-        <!-- Item 4 -->
-        <figure
-          class="relative overflow-hidden rounded-xl border border-border bg-card shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
-          style="flex: 1;"
-          onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0.2)'"
-          onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0)'">
-          <img
-            src="./brand/Galery/RopaNFL.jpeg"
-            alt="Atención en punto de venta"
-            loading="lazy"
-            class="w-full h-full object-cover"
-            style="transition: transform 0.5s ease; transform: scale(1);"
-          />
-          <div class="overlay absolute inset-0" style="transition: background 0.5s ease; background: rgba(0,0,0,0);"></div>
-          <figcaption class="absolute inset-x-0 bottom-0 flex flex-col text-white"
-            style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 100%); padding: 80px 20px 24px 20px;">
-            <div class="font-display text-base font-semibold">Atención en punto de venta</div>
-            <div class="mt-1 text-sm text-white/80">Personal capacitado en piso</div>
-          </figcaption>
-        </figure>
-
-        <!-- Item 5 -->
-        <figure
-          class="relative overflow-hidden rounded-xl border border-border bg-card shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
-          style="flex: 1;"
-          onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0.2)'"
-          onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0)'">
-          <img
-            src="./brand/Galery/Mascarillas.jpeg"
-            alt="Belleza y cuidado personal"
-            loading="lazy"
-            class="w-full h-full object-cover"
-            style="transition: transform 0.5s ease; transform: scale(1);"
-          />
-          <div class="overlay absolute inset-0" style="transition: background 0.5s ease; background: rgba(0,0,0,0);"></div>
-          <figcaption class="absolute inset-x-0 bottom-0 flex flex-col text-white"
-            style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 100%); padding: 80px 20px 24px 20px;">
-            <div class="font-display text-base font-semibold">Belleza y cuidado personal</div>
-            <div class="mt-1 text-sm text-white/80">Demostración de productos premium</div>
-          </figcaption>
-        </figure>
-
-        <!-- Item 6 -->
-        <figure
-          class="relative overflow-hidden rounded-xl border border-border bg-card shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
-          style="flex: 1;"
-          onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0.2)'"
-          onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0)'">
-          <img
-            src="./brand/Galery/Plata.jpeg"
-            alt="Joyería de plata"
-            loading="lazy"
-            class="w-full h-full object-cover"
-            style="transition: transform 0.5s ease; transform: scale(1);"
-          />
-          <div class="overlay absolute inset-0" style="transition: background 0.5s ease; background: rgba(0,0,0,0);"></div>
-          <figcaption class="absolute inset-x-0 bottom-0 flex flex-col text-white"
-            style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 100%); padding: 80px 20px 24px 20px;">
-            <div class="font-display text-base font-semibold">Joyería de plata</div>
-            <div class="mt-1 text-sm text-white/80">Exhibición y venta especializada</div>
-          </figcaption>
-        </figure>
-
-      </div>
-
-      <!-- FILA 3 -->
-      <div class="flex gap-5" style="height: 270px;">
-
-        <!-- Item 7 -->
-        <figure
-          class="relative overflow-hidden rounded-xl border border-border bg-card shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elevated)]"
-          style="flex: 0 0 calc(33.333% - 14px);"
-          onmouseover="this.querySelector('img').style.transform='scale(1.08)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0.2)'"
-          onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.overlay').style.background='rgba(0,0,0,0)'">
-          <img
-            src="./brand/Galery/Ropa.jpeg"
-            alt="Moda y temporada"
-            loading="lazy"
-            class="w-full h-full object-cover"
-            style="transition: transform 0.5s ease; transform: scale(1);"
-          />
-          <div class="overlay absolute inset-0" style="transition: background 0.5s ease; background: rgba(0,0,0,0);"></div>
-          <figcaption class="absolute inset-x-0 bottom-0 flex flex-col text-white"
-            style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 100%); padding: 80px 20px 24px 20px;">
-            <div class="font-display text-base font-semibold">Moda y temporada</div>
-            <div class="mt-1 text-sm text-white/80">Activaciones comerciales en tienda</div>
-          </figcaption>
-        </figure>
-
-      </div>
-
-    </div>
-  </div>
-</section>
     <!-- CONTACTO -->
     <section id="contacto" class="border-b border-border/60 bg-background py-24">
       <div class="mx-auto max-w-7xl px-6">
@@ -639,7 +568,8 @@
                 </div>
                 <div>
                   <div class="font-semibold text-foreground">Correo</div>
-                  <a href="mailto:contacto@bijemerkatto.com" class="text-muted-foreground hover:text-primary">contacto@bijemerkatto.com</a>
+                  <a href="mailto:contacto@bijemerkatto.com"
+                    class="text-muted-foreground hover:text-primary">contacto@bijemerkatto.com</a>
                 </div>
               </li>
               <li class="flex items-start gap-4">
@@ -663,133 +593,45 @@
             </ul>
           </div>
 
-          <form id="contact-form" style="background: #0A2C5E; border-radius: 16px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(10,44,94,0.25);">
-            <div style="margin-bottom: 1.75rem;">
-              <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0 0 0.25rem;">Escríbenos</h3>
-              <p style="color: #93c5fd; font-size: 0.8rem; margin: 0;">Todos los campos marcados con * son obligatorios</p>
-            </div>
-
-            <div style="margin-bottom: 1.1rem;">
-              <label style="display:block; color: #bfdbfe; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem;">
-                Nombre de la compañía *
-              </label>
-              <input type="text" name="company" required placeholder="Nombre de su empresa"
-                style="width: 100%; box-sizing: border-box; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 0.65rem 1rem; color: #fff; font-size: 0.875rem; outline: none; transition: border-color 0.2s;"
-                onfocus="this.style.borderColor='#0A7EE4'; this.style.background='rgba(10,126,228,0.12)'"
-                onblur="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.background='rgba(255,255,255,0.07)'" />
-            </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.1rem;">
+          <form id="contact-form" class="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
+            <div class="grid gap-5 sm:grid-cols-2">
               <div>
-                <label style="display:block; color: #bfdbfe; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem;">
-                  Email *
-                </label>
-                <input type="email" name="email" required placeholder="nombre@empresa.com"
-                  style="width: 100%; box-sizing: border-box; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 0.65rem 1rem; color: #fff; font-size: 0.875rem; outline: none;"
-                  onfocus="this.style.borderColor='#0A7EE4'; this.style.background='rgba(10,126,228,0.12)'"
-                  onblur="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.background='rgba(255,255,255,0.07)'" />
+                <label for="name"
+                  class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Nombre</label>
+                <input id="name" name="name" type="text" required placeholder="Su nombre completo"
+                  class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
               </div>
               <div>
-                <label style="display:block; color: #bfdbfe; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem;">
-                  Teléfono *
-                </label>
-                <input type="tel" name="phone" required placeholder="+52 55 0000 0000"
-                  style="width: 100%; box-sizing: border-box; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 0.65rem 1rem; color: #fff; font-size: 0.875rem; outline: none;"
-                  onfocus="this.style.borderColor='#0A7EE4'; this.style.background='rgba(10,126,228,0.12)'"
-                  onblur="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.background='rgba(255,255,255,0.07)'" />
-              </div>
-            </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.1rem;">
-              <div>
-                <label style="display:block; color: #bfdbfe; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem;">
-                  Fecha inicio del evento *
-                </label>
-                <div style="display: grid; grid-template-columns: 2fr 3fr 2fr; gap: 0.4rem;">
-                  <input type="number" name="start_day" placeholder="Día" min="1" max="31" style="width:100%; box-sizing:border-box; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.65rem 0.5rem; color:#fff; font-size:0.8rem; outline:none; text-align:center;" onfocus="this.style.borderColor='#0A7EE4'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
-                  <select name="start_month" style="width:100%; box-sizing:border-box; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.65rem 0.3rem; color:#fff; font-size:0.75rem; outline:none; appearance:none; text-align:center;" onfocus="this.style.borderColor='#0A7EE4'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
-                    <option value="" style="background:#0A2C5E;">Mes</option>
-                    <option style="background:#0A2C5E;">Enero</option><option style="background:#0A2C5E;">Febrero</option>
-                    <option style="background:#0A2C5E;">Marzo</option><option style="background:#0A2C5E;">Abril</option>
-                    <option style="background:#0A2C5E;">Mayo</option><option style="background:#0A2C5E;">Junio</option>
-                    <option style="background:#0A2C5E;">Julio</option><option style="background:#0A2C5E;">Agosto</option>
-                    <option style="background:#0A2C5E;">Septiembre</option><option style="background:#0A2C5E;">Octubre</option>
-                    <option style="background:#0A2C5E;">Noviembre</option><option style="background:#0A2C5E;">Diciembre</option>
-                  </select>
-                  <input type="number" name="start_year" placeholder="Año" min="2024" max="2030" style="width:100%; box-sizing:border-box; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.65rem 0.3rem; color:#fff; font-size:0.8rem; outline:none; text-align:center;" onfocus="this.style.borderColor='#0A7EE4'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
-                </div>
+                <label for="company"
+                  class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Empresa</label>
+                <input id="company" name="company" type="text" required placeholder="Nombre de su empresa"
+                  class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
               </div>
               <div>
-                <label style="display:block; color: #bfdbfe; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem;">
-                  Fecha final del evento *
-                </label>
-                <div style="display: grid; grid-template-columns: 2fr 3fr 2fr; gap: 0.4rem;">
-                  <input type="number" name="end_day" placeholder="Día" min="1" max="31" style="width:100%; box-sizing:border-box; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.65rem 0.5rem; color:#fff; font-size:0.8rem; outline:none; text-align:center;" onfocus="this.style.borderColor='#0A7EE4'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
-                  <select name="end_month" style="width:100%; box-sizing:border-box; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.65rem 0.3rem; color:#fff; font-size:0.75rem; outline:none; appearance:none; text-align:center;" onfocus="this.style.borderColor='#0A7EE4'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
-                    <option value="" style="background:#0A2C5E;">Mes</option>
-                    <option style="background:#0A2C5E;">Enero</option><option style="background:#0A2C5E;">Febrero</option>
-                    <option style="background:#0A2C5E;">Marzo</option><option style="background:#0A2C5E;">Abril</option>
-                    <option style="background:#0A2C5E;">Mayo</option><option style="background:#0A2C5E;">Junio</option>
-                    <option style="background:#0A2C5E;">Julio</option><option style="background:#0A2C5E;">Agosto</option>
-                    <option style="background:#0A2C5E;">Septiembre</option><option style="background:#0A2C5E;">Octubre</option>
-                    <option style="background:#0A2C5E;">Noviembre</option><option style="background:#0A2C5E;">Diciembre</option>
-                  </select>
-                  <input type="number" name="end_year" placeholder="Año" min="2024" max="2030" style="width:100%; box-sizing:border-box; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.65rem 0.3rem; color:#fff; font-size:0.8rem; outline:none; text-align:center;" onfocus="this.style.borderColor='#0A7EE4'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
-                </div>
+                <label for="email"
+                  class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Correo</label>
+                <input id="email" name="email" type="email" required placeholder="nombre@empresa.com"
+                  class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+              </div>
+              <div>
+                <label for="phone"
+                  class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Teléfono</label>
+                <input id="phone" name="phone" type="tel" placeholder="+52 55 0000 0000"
+                  class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
               </div>
             </div>
-
-            <div style="margin-bottom: 1.5rem;">
-              <label style="display:block; color: #bfdbfe; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">
-                Ubicación del evento
-              </label>
-              <div style="display: grid; grid-template-columns: 1fr; gap: 0.5rem;">
-                <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer; color:#e0eaff; font-size:0.82rem; line-height:1.4;">
-                  <input type="checkbox" name="region[]" value="cdmx" style="width:16px; height:16px; flex-shrink:0; margin-top:1px; accent-color:#0A7EE4; cursor:pointer;" />
-                  CDMX y área metropolitana
-                </label>
-                <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer; color:#e0eaff; font-size:0.82rem; line-height:1.4;">
-                  <input type="checkbox" name="region[]" value="fronteriza" style="width:16px; height:16px; flex-shrink:0; margin-top:1px; accent-color:#0A7EE4; cursor:pointer;" />
-                  Región Fronteriza (Tijuana, Ciudad Juárez, Ensenada, Mexicali)
-                </label>
-                <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer; color:#e0eaff; font-size:0.82rem; line-height:1.4;">
-                  <input type="checkbox" name="region[]" value="norte" style="width:16px; height:16px; flex-shrink:0; margin-top:1px; accent-color:#0A7EE4; cursor:pointer;" />
-                  Región Norte (Hermosillo, Chihuahua, Saltillo, Culiacán, Torreón)
-                </label>
-                <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer; color:#e0eaff; font-size:0.82rem; line-height:1.4;">
-                  <input type="checkbox" name="region[]" value="sur" style="width:16px; height:16px; flex-shrink:0; margin-top:1px; accent-color:#0A7EE4; cursor:pointer;" />
-                  Región Sur (Mérida, Cancún, Villahermosa, Veracruz, Xalapa)
-                </label>
-                <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer; color:#e0eaff; font-size:0.82rem; line-height:1.4;">
-                  <input type="checkbox" name="region[]" value="bajo" style="width:16px; height:16px; flex-shrink:0; margin-top:1px; accent-color:#0A7EE4; cursor:pointer;" />
-                  Región Bajío (Querétaro, León, Celaya, Morelia, SLP, Aguascalientes, Puerto Vallarta)
-                </label>
-                <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer; color:#e0eaff; font-size:0.82rem; line-height:1.4;">
-                  <input type="checkbox" name="region[]" value="monterrey" style="width:16px; height:16px; flex-shrink:0; margin-top:1px; accent-color:#0A7EE4; cursor:pointer;" />
-                  Monterrey
-                </label>
-                <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer; color:#e0eaff; font-size:0.82rem; line-height:1.4;">
-                  <input type="checkbox" name="region[]" value="guadalajara" style="width:16px; height:16px; flex-shrink:0; margin-top:1px; accent-color:#0A7EE4; cursor:pointer;" />
-                  Guadalajara
-                </label>
-                <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer; color:#e0eaff; font-size:0.82rem; line-height:1.4;">
-                  <input type="checkbox" name="region[]" value="otro" style="width:16px; height:16px; flex-shrink:0; margin-top:1px; accent-color:#0A7EE4; cursor:pointer;" />
-                  Otro
-                </label>
-              </div>
+            <div class="mt-5">
+              <label for="message"
+                class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Mensaje</label>
+              <textarea id="message" name="message" required rows="5" placeholder="Cuéntenos sobre su proyecto"
+                class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
             </div>
-
             <button type="submit"
-              style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: #0A7EE4; color: #fff; border: none; border-radius: 8px; padding: 0.85rem 1.5rem; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: background 0.2s, transform 0.1s; box-shadow: 0 4px 15px rgba(10,126,228,0.35);"
-              onmouseover="this.style.background='#0868c4'"
-              onmouseout="this.style.background='#0A7EE4'"
-              onmousedown="this.style.transform='scale(0.98)'"
-              onmouseup="this.style.transform='scale(1)'">
-              Enviar mensaje
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">
+              Enviar mensaje <i data-lucide="arrow-right" class="h-4 w-4"></i>
             </button>
-
-            <p id="success-message" style="display:none; margin-top:1rem; border-radius:8px; border:1px solid rgba(10,126,228,0.3); background:rgba(10,126,228,0.12); padding:0.6rem 1rem; text-align:center; font-size:0.85rem; color:#93c5fd;">
+            <p id="success-message"
+              class="mt-4 rounded-md border border-primary/20 bg-primary/5 px-3 py-2 text-center text-sm text-primary hidden">
               Gracias por contactarnos. Le responderemos a la brevedad.
             </p>
           </form>
@@ -798,45 +640,50 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="bg-foreground text-background/90">
-    <div class="mx-auto grid max-w-7xl gap-10 px-12 py-14 md:grid-cols-4">
+    <div class="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-4">
       <div class="md:col-span-2">
         <div class="flex items-center gap-3">
-          <img src="./brand/LogoDark.png" alt="BIJE MERKATTO" class="h-16 w-16 rounded-md bg-background/5 object-contain" />
+          <img src="./brand/logo-mark.jpeg" alt="BIJE MERKATTO" class="h-10 w-10 rounded-md bg-background/5 object-contain" />
           <div class="font-display text-lg font-bold tracking-tight text-background">
             BIJE MERKATTO
           </div>
         </div>
         <p class="mt-4 max-w-md text-sm leading-relaxed text-background/70">
-          Más de una década creando experiencias de excelencia para marcas líderes.
+          Especialistas en demostración, promoción y venta de productos de alta gama. Más de una década creando
+          experiencias de excelencia para marcas líderes.
         </p>
       </div>
       <div>
         <h4 class="font-display text-sm font-semibold uppercase tracking-wider text-background">Contacto</h4>
         <ul class="mt-4 space-y-2 text-sm text-background/70">
           <li>contacto@bijemerkatto.com</li>
-          <li>555 920 0586</li>
-          <li>Naucalpan de Juárez, Estado de México</li>
+          <li>+52 (55) 0000 0000</li>
+          <li>Ciudad de México, México</li>
         </ul>
       </div>
       <div>
         <h4 class="font-display text-sm font-semibold uppercase tracking-wider text-background">Síguenos</h4>
         <div class="mt-4 flex gap-3">
-          <a href="https://www.facebook.com/profile.php?id=61575915837002" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            class="flex h-9 w-9 items-center justify-center rounded-md border border-background/15 transition-colors hover:border-primary-light"
-            style="color: white;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-          </svg>
+          <a href="#" aria-label="LinkedIn"
+            class="flex h-9 w-9 items-center justify-center rounded-md border border-background/15 text-background/80 transition-colors hover:border-primary-light hover:text-primary-light">
+            <i data-lucide="linkedin" class="h-4 w-4"></i>
+          </a>
+          <a href="#" aria-label="Facebook"
+            class="flex h-9 w-9 items-center justify-center rounded-md border border-background/15 text-background/80 transition-colors hover:border-primary-light hover:text-primary-light">
+            <i data-lucide="facebook" class="h-4 w-4"></i>
+          </a>
+          <a href="#" aria-label="Instagram"
+            class="flex h-9 w-9 items-center justify-center rounded-md border border-background/15 text-background/80 transition-colors hover:border-primary-light hover:text-primary-light">
+            <i data-lucide="instagram" class="h-4 w-4"></i>
           </a>
         </div>
       </div>
     </div>
     <div class="border-t border-background/10">
-      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-background/60 sm:flex-row">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-background/60 sm:flex-row">
         <p>© <span id="current-year">2026</span> BIJE MERKATTO. Todos los derechos reservados.</p>
         <div class="flex gap-5">
           <a href="#" class="hover:text-background">Aviso de privacidad</a>
@@ -846,6 +693,7 @@
     </div>
   </footer>
 
+  <!-- JAVASCRIPT -->
   <script defer src="./js/main.js"></script>
 </body>
 
