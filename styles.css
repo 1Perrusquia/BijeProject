@@ -5,7 +5,7 @@
    ========================================= */
 :root {
   --color-brand: oklch(0.45 0.14 250);
-  --color-brand-light: oklch(0.75 0.12 250);
+  --color-brand-light: oklch(100% 0.00011 271.152);
   --color-brand-dark: oklch(0.28 0.13 258);
 }
 
