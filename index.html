@@ -108,82 +108,45 @@
 
   <main>
     <!-- Hero Section -->
-<section class="relative overflow-hidden">
+<section class="hero" aria-label="Introducción">
+  <div class="hero__bg-radial" aria-hidden="true"></div>
+  <div class="hero__bg-grid" aria-hidden="true"></div>
 
-  <!-- Decorative gradients -->
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-60"
-    style="background-image: radial-gradient(circle at 15% 20%, color-mix(in oklab, var(--primary-light) 22%, transparent), transparent 55%), radial-gradient(circle at 90% 85%, color-mix(in oklab, var(--primary) 14%, transparent), transparent 55%)">
-  </div>
+  <div class="hero__banner">
+    <div class="hero__image-frame">
+      <img src="brand/Equipo.jpg" alt="Equipo BIJE MERKATTO" class="hero__image" />
+      <div class="hero__overlay"></div>
 
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-[0.04]"
-    style="background-image: linear-gradient(var(--foreground) 1px, transparent 1px),
-           linear-gradient(90deg, var(--foreground) 1px, transparent 1px);
-           background-size: 48px 48px;">
-  </div>
+      <div class="hero__content">
+        <h1 class="hero__title">Tu marca en las mejores manos</h1>
 
-  <!-- Contenedor principal -->
-  <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-12 lg:py-24">
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-number">+ 18</span>
+            <span class="hero__stat-label">años de experiencia</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">+ 50</span>
+            <span class="hero__stat-label">marcas atendidas</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">100%</span>
+            <span class="hero__stat-label">compromiso</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- TEXTO -->
-    <div class="lg:col-span-5">
-
-      <h1 class="text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.75rem]">
-        Tu marca en las
-        <span class="text-primary">mejores manos</span>
-      </h1>
-
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-        Bienvenidos al corazón de <strong class="font-semibold text-foreground">BIJE MERKATTO</strong>.
-        Cada día creamos experiencias únicas para nuestros clientes.
+    <div class="hero__footer">
+      <p class="hero__description">
+        Cada día creamos experiencias únicas para nuestros clientes, transformamos
+        cada evento con soluciones innovadoras y un enfoque estratégico.
       </p>
-
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#nosotros"
-          class="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elevated)]">
-          Conoce más
-        </a>
-
-        <a href="#servicios"
-          class="inline-flex items-center gap-2 rounded-md border border-border bg-background/70 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:border-primary/30 hover:bg-background">
-          Servicios
-        </a>
+      <div class="hero__actions">
+        <a href="#nosotros" class="btn btn--primary">Conoce más de la empresa &rarr;</a>
+        <a href="#servicios" class="btn btn--secondary">Nuestros servicios</a>
       </div>
-
-      <dl class="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-border/80 pt-8">
-        <div>
-          <dt class="bg-clip-text font-display text-3xl font-bold text-transparent" style="background-image: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%)">+18</dt>
-          <dd class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Años de experiencia</dd>
-        </div>
-        <div>
-          <dt class="bg-clip-text font-display text-3xl font-bold text-transparent" style="background-image: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%)">+50</dt>
-          <dd class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Marcas atendidas</dd>
-        </div>
-        <div>
-          <dt class="bg-clip-text font-display text-3xl font-bold text-transparent" style="background-image: linear-gradient(135deg, oklch(0.28 0.13 258) 0%, oklch(0.45 0.14 250) 100%)">100%</dt>
-          <dd class="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Compromiso</dd>
-        </div>
-      </dl>
-
     </div>
-
-    <!-- IMAGEN HERO (PORTADA REAL) -->
-    <div class="lg:col-span-7">
-
-      <div class="relative h-[80vh] min-h-[680px] overflow-hidden rounded-2xl border border-border/80 shadow-xl">
-
-        <img
-          src="./brand/Equipo.jpg"
-          alt="BIJE MERKATTO — Servicios Especializados"
-          class="h-full w-full object-cover"
-        />
-
-        <!-- overlay para contraste leve -->
-        <div class="absolute inset-0 bg-black/10"></div>
-
-      </div>
-
-    </div>
-
   </div>
 </section>
 
@@ -485,53 +448,106 @@
               </li>
             </ul>
           </div>
+          <form id="contact-form" class="contact-form">
+          <div class="contact-form__header">
+            <h3 class="contact-form__title">Escríbenos</h3>
+            <p class="contact-form__subtitle">Todos los campos marcados con * son obligatorios</p>
+          </div>
 
-          <form id="contact-form" class="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label for="name"
-                  class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Nombre</label>
-                <input id="name" name="name" type="text" required placeholder="Su nombre completo"
-                  class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
-              </div>
-              <div>
-                <label for="company"
-                  class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Empresa</label>
-                <input id="company" name="company" type="text" required placeholder="Nombre de su empresa"
-                  class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
-              </div>
-              <div>
-                <label for="email"
-                  class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Correo</label>
-                <input id="email" name="email" type="email" required placeholder="nombre@empresa.com"
-                  class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
-              </div>
-              <div>
-                <label for="phone"
-                  class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Teléfono</label>
-                <input id="phone" name="phone" type="tel" placeholder="+52 55 0000 0000"
-                  class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+          <div class="form-group">
+            <label class="form-label" for="company">Nombre de la compañía *</label>
+            <input type="text" id="company" name="company" required placeholder="Nombre de su empresa" class="form-input" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="nombre@empresa.com" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Teléfono *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+52 55 0000 0000" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="start_day">Fecha inicio del evento *</label>
+              <div class="date-group">
+                <input type="number" id="start_day" name="start_day" placeholder="Día" min="1" max="31" class="form-input form-input--day" />
+                <select name="start_month" class="form-select" aria-label="Mes de inicio">
+                  <option value="">Mes</option>
+                  <option>Enero</option><option>Febrero</option><option>Marzo</option><option>Abril</option>
+                  <option>Mayo</option><option>Junio</option><option>Julio</option><option>Agosto</option>
+                  <option>Septiembre</option><option>Octubre</option><option>Noviembre</option><option>Diciembre</option>
+                </select>
+                <input type="number" name="start_year" placeholder="Año" min="2024" max="2030" class="form-input form-input--year" />
               </div>
             </div>
-            <div class="mt-5">
-              <label for="message"
-                class="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-foreground/80">Mensaje</label>
-              <textarea id="message" name="message" required rows="5" placeholder="Cuéntenos sobre su proyecto"
-                class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"></textarea>
+            <div class="form-group">
+              <label class="form-label" for="end_day">Fecha final del evento *</label>
+              <div class="date-group">
+                <input type="number" id="end_day" name="end_day" placeholder="Día" min="1" max="31" class="form-input form-input--day" />
+                <select name="end_month" class="form-select" aria-label="Mes final">
+                  <option value="">Mes</option>
+                  <option>Enero</option><option>Febrero</option><option>Marzo</option><option>Abril</option>
+                  <option>Mayo</option><option>Junio</option><option>Julio</option><option>Agosto</option>
+                  <option>Septiembre</option><option>Octubre</option><option>Noviembre</option><option>Diciembre</option>
+                </select>
+                <input type="number" name="end_year" placeholder="Año" min="2024" max="2030" class="form-input form-input--year" />
+              </div>
             </div>
-            <button type="submit"
-              class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">
-              Enviar mensaje <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </button>
-            <p id="success-message"
-              class="mt-4 rounded-md border border-primary/20 bg-primary/5 px-3 py-2 text-center text-sm text-primary hidden">
-              Gracias por contactarnos. Le responderemos a la brevedad.
-            </p>
-          </form>
+          </div>
+
+          <fieldset class="form-fieldset">
+            <legend class="form-label">Ubicación del evento</legend>
+            <div class="region-list">
+              <label class="form-checkbox">
+                <input type="checkbox" name="region[]" value="cdmx" />
+                CDMX y área metropolitana
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="region[]" value="fronteriza" />
+                Región Fronteriza (Tijuana, Ciudad Juárez, Ensenada, Mexicali)
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="region[]" value="norte" />
+                Región Norte (Hermosillo, Chihuahua, Saltillo, Culiacán, Torreón)
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="region[]" value="sur" />
+                Región Sur (Mérida, Cancún, Villahermosa, Veracruz, Xalapa)
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="region[]" value="bajo" />
+                Región Bajío (Querétaro, León, Celaya, Morelia, SLP, Aguascalientes, Puerto Vallarta)
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="region[]" value="monterrey" />
+                Monterrey
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="region[]" value="guadalajara" />
+                Guadalajara
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="region[]" value="otro" />
+                Otro
+              </label>
+            </div>
+          </fieldset>
+          <button type="submit" class="submit-btn">
+            Enviar mensaje
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+
+          <p id="success-message" class="success-message">
+            Gracias por contactarnos. Le responderemos a la brevedad.
+          </p>
+        </form>
         </div>
       </div>
     </section>
-  
   </main>
 
   <!-- FOOTER -->
