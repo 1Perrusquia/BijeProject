@@ -107,48 +107,69 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-<section class="hero" aria-label="Introducción">
-  <div class="hero__bg-radial" aria-hidden="true"></div>
-  <div class="hero__bg-grid" aria-hidden="true"></div>
+    <section class="hero">
 
-  <div class="hero__banner">
-    <div class="hero__image-frame">
-      <img src="brand/Equipo.jpg" alt="Equipo BIJE MERKATTO" class="hero__image" />
-      <div class="hero__overlay"></div>
+  <!-- Fondos decorativos -->
+  <div class="hero__decor hero__decor--gradient" aria-hidden="true"></div>
+  <div class="hero__decor hero__decor--grid" aria-hidden="true"></div>
 
-      <div class="hero__content">
-        <h1 class="hero__title">Tu marca en las mejores manos</h1>
+  <div class="hero__container">
 
-        <div class="hero__stats">
-          <div class="hero__stat">
-            <span class="hero__stat-number">+ 18</span>
-            <span class="hero__stat-label">años de experiencia</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-number">+ 50</span>
-            <span class="hero__stat-label">marcas atendidas</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-number">100%</span>
-            <span class="hero__stat-label">compromiso</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- TEXTO -->
+    <div class="hero__content">
 
-    <div class="hero__footer">
+      <h1 class="hero__title">
+        Tu marca en las
+        <span class="hero__title-highlight">mejores manos</span>
+      </h1>
+
       <p class="hero__description">
-        Cada día creamos experiencias únicas para nuestros clientes, transformamos
-        cada evento con soluciones innovadoras y un enfoque estratégico.
+        Bienvenidos al corazón de <strong class="hero__description-brand">BIJE MERKATTO</strong>.
+        Cada día creamos experiencias únicas para nuestros clientes.
       </p>
+
       <div class="hero__actions">
-        <a href="#nosotros" class="btn btn--primary">Conoce más de la empresa &rarr;</a>
-        <a href="#servicios" class="btn btn--secondary">Nuestros servicios</a>
+        <a href="#nosotros" class="hero__btn hero__btn--primary">
+          Conoce más
+        </a>
+
+        <a href="#servicios" class="hero__btn hero__btn--secondary">
+          Servicios
+        </a>
+      </div>
+
+      <dl class="hero__stats">
+        <div class="hero__stat">
+          <dt class="hero__stat-number">+18</dt>
+          <dd class="hero__stat-label">Años de experiencia</dd>
+        </div>
+        <div class="hero__stat">
+          <dt class="hero__stat-number">+50</dt>
+          <dd class="hero__stat-label">Marcas atendidas</dd>
+        </div>
+        <div class="hero__stat">
+          <dt class="hero__stat-number">100%</dt>
+          <dd class="hero__stat-label">Compromiso</dd>
+        </div>
+      </dl>
+
+    </div>
+
+    <!-- IMAGEN HERO (PORTADA REAL) -->
+    <div class="hero__image-col">
+      <div class="hero__image-wrapper">
+        <img
+          src="./brand/Equipo.jpg"
+          alt="BIJE MERKATTO — Servicios Especializados"
+          class="hero__image"
+        />
+        <div class="hero__image-overlay" aria-hidden="true"></div>
       </div>
     </div>
+
   </div>
 </section>
+
 
     <!-- NOSOTROS 190-380-->
 <section id="nosotros" class="border-b border-border/60 bg-background py-24">
